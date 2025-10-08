@@ -31,11 +31,11 @@ function Home() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [query, setQuery] = useState('');
-  const [pokemon, setPokemon] = useState<any>(null);
-  const [error, setError] = useState('');
+  const [pokemon] = useState<any>(null);
+  const [error] = useState('');
   const [allPokemon, setAllPokemon] = useState<any[]>([]);
   const [dropdown, setDropdown] = useState<any[]>([]);
-  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [, setSelectedType] = useState<string | null>(null);
   const [gallery, setGallery] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [listSortProperty, setListSortProperty] = useState<'name' | 'id'>('name');
