@@ -1,0 +1,157 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 20px;
+}
+
+h1 {
+  color: black;
+  font-weight: bold;
+}
+
+.search-container {
+  position: sticky; 
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: gainsboro;
+  z-index: 2000;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-container input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid #000;
+  outline: none;
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #000;
+  background-color: bisque;
+  transition: all 0.3s ease;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 3000;
+}
+
+.dropdown li {
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown li:hover {
+  background-color: tan;
+  color: white;
+}
+
+.type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.type-buttons button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #000;
+  background-color: bisque;
+}
+
+.type-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.gallery-item {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.gallery-item .types {
+  font-size: 0.8em;
+}
+
+
+.pokemon-list-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pokemon-list {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+
+.pokemon-list-item {
+  padding: 4px 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pokemon-list-item:hover {
+  background-color: #ddd;
+}
