@@ -8,6 +8,7 @@ export default function Detail() {
   const { name } = useParams<{ name: string }>();
   const navigate = useNavigate();
   const [pokemon, setPokemon] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!name) return;
@@ -17,6 +18,7 @@ export default function Detail() {
         setPokemon(res.data);
       } catch (err) {
         console.error(err);
+        setError("Pokemon not found");
       }
     };
     fetchPokemon();
